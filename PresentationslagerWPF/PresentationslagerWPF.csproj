@@ -1,0 +1,47 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net7.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Converters\**" />
+    <EmbeddedResource Remove="Converters\**" />
+    <None Remove="Converters\**" />
+    <Page Remove="Converters\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="Bilder\Ski-Center-Logga.png" />
+    <None Remove="Bilder\TriBookingLogga.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="ceTe.DynamicPDF.CoreSuite.NET" Version="12.10.0" />
+    <PackageReference Include="Microsoft.Xaml.Behaviors.Wpf" Version="1.1.39" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Affärslager\Affärslager.csproj" />
+    <ProjectReference Include="..\Entiteter\Entiteter.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Bilder\Ski-Center-Logga.png" />
+    <Resource Include="Bilder\TriBookingLogga.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="PDF\Bokningsbekräftelse\" />
+    <Folder Include="PDF\Faktura\" />
+    <Folder Include="PDF\KvittoLektion\" />
+    <Folder Include="PDF\Bokningsbekräftelse\" />
+    <Folder Include="PDF\Bokningsbekräftelse\" />
+    <Folder Include="PDF\Bokningsbekräftelse\" />
+    <Folder Include="PDF\KvittoUtrustning\" />
+  </ItemGroup>
+
+</Project>
